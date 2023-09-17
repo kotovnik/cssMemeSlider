@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(26, 29, 34);
+    background-color: rgb(41, 47, 54);
     color: rgb(255, 255, 255);
 }
 html {
@@ -9,6 +9,7 @@ html {
     font-size: 1em;
 }
 body {
+    background-color: rgb(26, 29, 34);
     min-height: 100vh;
     margin: 0; 
     padding: 1em;
@@ -19,7 +20,6 @@ body {
     justify-content: center;
     padding: 1em;
     width: 85%;
-    background-color: rgb(41, 47, 54);
     border: 0.1em solid grey;
     border-radius: 1em;
 }
@@ -28,7 +28,6 @@ body {
     align-self: center;
     justify-content: space-between;
     flex-direction: column;
-    background-color: rgb(41, 47, 54);
     object-fit: contain;
 }
 .wrapper-text {
@@ -36,10 +35,8 @@ body {
     flex-direction: row;
     margin-top: 0.5em;
     height: 5em;
-    background-color: rgb(41, 47, 54);
 }
 .text {
-    background-color: rgb(41, 47, 54);
     width: 65%;
     margin: 0.3em 0;
     font-size: 2em;
@@ -65,13 +62,11 @@ body {
     align-items: center;
     justify-content: end;
     height: 5em;
-    background-color: rgb(41, 47, 54);
 }
 .button-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(41, 47, 54);
     height: 2em;
     width: 2em;
 }
@@ -79,9 +74,8 @@ body {
     box-sizing: border-box;
     width: 1.2em;
     height: 1.2em;
-    border-radius: 50px;
+    border-radius: 50%;
     border: 0.2em solid rgb(75, 125, 243);
-    background: rgb(47, 51, 55);
     color: rgb(47, 51, 55);
 }
 .btn-round-2,
@@ -89,7 +83,7 @@ body {
 .btn-round-4,
 .btn-round-5 {
     border: 0.1em solid rgb(75, 125, 243);
-    background: rgb(75, 125, 243);
+    background-color: rgb(75, 125, 243);
     color: rgb(75, 125, 243);
 }
 .button-wrapper:hover {
