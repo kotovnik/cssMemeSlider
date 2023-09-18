@@ -77,7 +77,7 @@ body {
 .texts {
     width: 0;
     visibility: hidden;
-    transform: translate(50px);
+    transform: translate(2em);
     opacity: 0;
     /* transition: visibility 0.5s, transform 0.5s linear, opacity 0.5s linear; */
 }
