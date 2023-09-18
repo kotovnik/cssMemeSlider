@@ -1,0 +1,181 @@
+* {
+    background-color: rgb(41, 47, 54);
+    color: rgb(255, 255, 255);
+}
+html {
+    position: static;
+    scroll-behavior: smooth;
+    height: 100%;
+    font-size: 1em;
+}
+body {
+    background-color: rgb(26, 29, 34);
+    min-height: 100vh;
+    margin: 0; 
+    padding: 1em;
+}
+.slider {
+    width: 60%;
+    align-self: center;
+}
+.slider-wrap {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 1em;
+    width: 85%;
+    height: 32em;
+    border: 0.1em solid grey;
+    border-radius: 1em;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.wrapper>input {
+    display: none;
+}
+
+.slides {
+    border-radius: 1em;  
+    width: 0;
+    visibility: hidden;
+    transform: translate(2em);
+    opacity: 0;
+    /* transition: visibility 0.5s linear, transform 0.5s linear, opacity 0.5s linear; */
+}
+#slide1:checked~.slider>.slide1,
+#slide2:checked~.slider>.slide2,
+#slide3:checked~.slider>.slide3,
+#slide4:checked~.slider>.slide4 {
+    /* width: 700px; */
+    width: 100%;
+    visibility: visible;
+    transform: translate(0);
+    opacity: 1;
+    transition: visibility 0.5s linear, transform 0.5s linear, opacity 0.5s linear;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20%;
+}
+.wrapper-text {
+    display: flex;
+    flex-direction: row;
+    height: 3em;
+}
+.text {
+    width: 67%;
+    margin: 0.3em 0;
+    font-size: 2em;
+    text-align: inherit;
+    align-self: center;
+}
+.texts {
+    width: 0;
+    visibility: hidden;
+    transform: translate(2em);
+    opacity: 0;
+    /* transition: visibility 0.5s, transform 0.5s linear, opacity 0.5s linear; */
+}
+#slide1:checked~.container>.wrapper-text>.texts1,
+#slide2:checked~.container>.wrapper-text>.texts2,
+#slide3:checked~.container>.wrapper-text>.texts3,
+#slide4:checked~.container>.wrapper-text>.texts4 {
+    width: auto;
+    visibility: visible;
+    transform: translate(0); 
+    opacity: 1;
+    transition: visibility 0.5s, transform 0.5s linear, opacity 0.5s linear;
+}
+
+
+/* ///////// */
+.controls {
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    align-items: center;
+    justify-content: space-between;
+    height: 3em;
+}
+.button-wrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 2em;
+}
+.btn {
+    box-sizing: border-box;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;   
+    border: 0.2em solid rgb(75, 125, 243);
+    background-color: rgb(75, 125, 243);
+    color: rgb(75, 125, 243);
+    transition: 0.6s;
+    cursor: pointer;
+}
+.wrapper label:hover .btn{
+    background-color: white;
+    border: 0.2em solid white;
+    transition: 0.6s;
+}
+#slide1:checked~.container>.controls label:nth-of-type(1) .btn,
+#slide2:checked~.container>.controls label:nth-of-type(2) .btn,
+#slide3:checked~.container>.controls label:nth-of-type(3) .btn,
+#slide4:checked~.container>.controls label:nth-of-type(4) .btn {
+    background-color: rgb(47, 51, 55);
+    transition: 0.6s;
+}
+
+.button-wrapper:hover .btn {
+    cursor: pointer;
+    border: 0.2em solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    transition: 0.6s;
+}
+.button-wrapper:hover .active-btn {
+    cursor: pointer;
+    border: 0.2em solid rgb(255, 255, 255);
+    background-color: rgb(47, 51, 55);
+    color: rgb(47, 51, 55);
+}
+
+/* media */
+@media (max-width: 790px) {
+    html {
+        font-size: 0.7em;
+    }
+    .slider-wrap {
+        height: 33em;
+    }
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .controls {
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    }
+    .text {
+        align-self: flex-start;
+    }
+}
+@media (min-width: 900px) {
+    .slider-wrap {
+        height: 35em;
+    }
+}
+@media (min-width: 1000px) {
+    .slider-wrap {
+        height: 51em;
+    }
+}
