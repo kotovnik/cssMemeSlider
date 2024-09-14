@@ -11,7 +11,7 @@ html {
 body {
     background-color: rgb(26, 29, 34);
     min-height: 100vh;
-    margin: 0; 
+    margin: 0;
     padding: 1em;
 }
 .slider {
@@ -38,7 +38,7 @@ body {
 }
 
 .slides {
-    border-radius: 1em;  
+    border-radius: 1em;
     width: 0;
     visibility: hidden;
     transform: translate(2em);
@@ -87,7 +87,7 @@ body {
 #slide4:checked~.container>.wrapper-text>.texts4 {
     width: auto;
     visibility: visible;
-    transform: translate(0); 
+    transform: translate(0);
     opacity: 1;
     transition: visibility 0.5s, transform 0.5s linear, opacity 0.5s linear;
 }
@@ -114,7 +114,7 @@ body {
     box-sizing: border-box;
     width: 1.2em;
     height: 1.2em;
-    border-radius: 50%;   
+    border-radius: 50%;
     border: 0.2em solid rgb(75, 125, 243);
     background-color: rgb(75, 125, 243);
     color: rgb(75, 125, 243);
@@ -169,6 +169,7 @@ body {
         align-self: flex-start;
     }
 }
+/* desktop */
 @media (min-width: 900px) {
     .slider-wrap {
         height: 35em;
@@ -176,6 +177,26 @@ body {
 }
 @media (min-width: 1000px) {
     .slider-wrap {
-        height: 51em;
+        height: 40em;
+    }
+}
+@media (min-width: 1200px) {
+    .slider-wrap {
+        height: 45em;
+    }
+}
+@media (min-width: 1300px) {
+    .slider-wrap {
+        height: 52em;
+    }
+}
+@media (min-width: 1400px) {
+    .slider-wrap {
+        height: 55em;
+    }
+}
+@media (min-width: 1600px) {
+    .slider-wrap {
+        height: 60em;
     }
 }
