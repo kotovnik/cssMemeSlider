@@ -7,10 +7,11 @@ html {
     scroll-behavior: smooth;
     height: 100%;
     font-size: 1em;
+    background-color: rgb(26, 29, 34);
 }
 body {
     background-color: rgb(26, 29, 34);
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin: 0;
     padding: 1em;
 }
